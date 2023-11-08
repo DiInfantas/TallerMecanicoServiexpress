@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Toma de Horas - Taller de Vehículos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Toma de Horas - Taller de Vehículos</h1>
+        <form onsubmit="mostrarDatos(event)">
+            <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="date" class="form-control" id="fecha" name="fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="hora">Hora</label>
+                <input type="time" class="form-control" id="hora" name="hora" required>
+            </div>
+            <div class="form-group">
+                <label for="servicio">Servicio</label>
+                <select class="form-control" id="servicio" name="servicio" required>
+                    <option value="cambio_aceite">Cambio de Aceite</option>
+                    <option value="revision_frenos">Revisión de Frenos</option>
+                    <option value="cambio_neumaticos">Cambio de Neumáticos</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Tomar Hora</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function mostrarDatos(event) {
+            event.preventDefault();
+
+            var fecha = document.getElementById('fecha').value;
+            var hora = document.getElementById('hora').value;
+            var servicio = document.getElementById('servicio').value;
+
+            alert(`Los datos han sido guardados:\nFecha: ${fecha}\nHora: ${hora}\nServicio: ${servicio}`);
+        }
+    </script>
+</body>
+</html>

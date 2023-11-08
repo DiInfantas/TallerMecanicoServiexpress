@@ -31,30 +31,33 @@
             </div>
         </nav>
 
-        
+        <div class="card">
+            <div class="card-body" style="text-align: center;">
+                <form action="procesar_cita.php" method="post">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required><br><br>
+            
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora" required><br><br>
+            
+                    <label for="servicio">Servicio:</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="Cambio de Aceite">Cambio de Aceite</option>
+                        <option value="Revisión de Frenos">Revisión de Frenos</option>
+                        <option value="Reparación de Motor">Reparación de Motor</option>
+                        <option value="Otro">Otro</option>
+                    </select><br><br>
+            
+                    <input type="submit" value="Agendar Cita">
+                </form>
 
-
-        <div id="carouselExample" class="carousel slide" style="padding-top: 5%;">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/img1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/img2.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/img3.jpg" class="d-block w-100" alt="...">
-                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
+
+        
+       
+
+
     </div>
 </body>
 
